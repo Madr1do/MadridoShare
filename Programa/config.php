@@ -2,9 +2,9 @@
 session_start();
 
 $DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'maoweb_share';
-$DATABASE_PASS = 'LKJNiuygsc7t3y7fygehsd';
-$DATABASE_NAME = 'maoweb_share';
+$DATABASE_USER = 'enter_username';
+$DATABASE_PASS = 'enter_db_password';
+$DATABASE_NAME = 'enter_db_name';
 // Try and connect using the info above.
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if ( mysqli_connect_errno() ) {
