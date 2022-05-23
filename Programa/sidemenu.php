@@ -1,14 +1,14 @@
 <?php
 include 'config.php';
 include 'loggedin.php';
+include 'pareigos.php';
+include 'style.css';
 $stmt = $con->prepare('SELECT username, email, role, image FROM accounts WHERE id = ?');
 $stmt->bind_param('i', $_SESSION['id']);
 $stmt->execute();
 $stmt->bind_result($username, $email, $role, $image);
 $stmt->fetch();
 $stmt->close();
-include 'pareigos.php';
-include 'style.css';
 $chatas = '../addons/chat/chat.php';
 $chatas2 = '../chat/chat.php';
 $kalendorius = '../addons/calendar/calendar.php';
@@ -33,7 +33,7 @@ $failai2 = '../myfiles/myfiles.php';
 
     <div class="wrapper">
 
-        <div style='display: none; min-height: 115vh; box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;' id="showhide" class="sidebar">
+        <div style='min-height: 115vh; box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;' id="showhide" class="sidebar">
           <div class="profile">
             <?php
             if (@getimagesize('../../images/'.$_SESSION['id'].'/'.$image)) {
@@ -230,10 +230,10 @@ $failai2 = '../myfiles/myfiles.php';
     <script>
     function myFunction() {
       var x = document.getElementById("showhide");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-      } else {
+      if (x.style.display === "block") {
         x.style.display = "none";
+      } else {
+        x.style.display = "block";
       }
     }
   </script>
