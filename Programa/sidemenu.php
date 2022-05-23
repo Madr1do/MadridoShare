@@ -1,14 +1,14 @@
 <?php
 include 'config.php';
 include 'loggedin.php';
-include 'pareigos.php';
-include 'style.css';
 $stmt = $con->prepare('SELECT username, email, role, image FROM accounts WHERE id = ?');
 $stmt->bind_param('i', $_SESSION['id']);
 $stmt->execute();
 $stmt->bind_result($username, $email, $role, $image);
 $stmt->fetch();
 $stmt->close();
+include 'pareigos.php';
+include 'style.css';
 $chatas = '../addons/chat/chat.php';
 $chatas2 = '../chat/chat.php';
 $kalendorius = '../addons/calendar/calendar.php';
@@ -19,7 +19,6 @@ $vartotojai = '../addons/accounts/accounts.php';
 $vartotojai2 = '../accounts/accounts.php';
 $failai = '../addons/myfiles/myfiles.php';
 $failai2 = '../myfiles/myfiles.php';
-
 ?>
 
 <head>
