@@ -33,7 +33,7 @@ $failai2 = '../myfiles/myfiles.php';
 
     <div class="wrapper">
 
-        <div style='min-height: 115vh; box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;' id="showhide" class="sidebar">
+        <div style='display: none; min-height: 115vh; box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;' id="showhide" class="sidebar">
           <div class="profile">
             <?php
             if (@getimagesize('../../images/'.$_SESSION['id'].'/'.$image)) {
@@ -223,21 +223,19 @@ $failai2 = '../myfiles/myfiles.php';
         </div>
 
         </div>
-        <button class='butonas' id="butonas" onclick="showhide()"><i class="fas fa-bars"></i></button>
+        <button class='butonas' onclick="myFunction()"><i class="fas fa-bars"></i></button>
 
     </div>
 
     <script>
-   function showhide() {
-      var v = document.getElementById("showhide");
-      var m = document.getElementById("butonas");
-      if (v.style.display === "none") {
-         v.style.display = "block";
-
+    function myFunction() {
+      var x = document.getElementById("showhide");
+      if (x.style.display === "none") {
+        x.style.display = "block";
       } else {
-         v.style.display = "none";
+        x.style.display = "none";
       }
-   }
+    }
   </script>
 </body>
 </html>
