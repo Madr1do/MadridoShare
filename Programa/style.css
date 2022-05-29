@@ -1,5 +1,4 @@
 <style>
-
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
 body{
@@ -9,7 +8,9 @@ body{
   width: 72%;
   margin-left: 24%;
 }
-
+textarea {
+  resize: none;
+}
 .card25{
   position: relative;
   flex-direction: column;
@@ -109,6 +110,22 @@ body{
   .card94{
     width: 88%;
     padding: 1rem 1rem 1rem 1rem;
+  }
+
+  .wrapper .sidebar .profile img{
+      display: block;
+      width: 50px !important;
+      height: 50px !important;
+      border-radius: 50%;
+      margin: 0 auto;
+  }
+
+  .profile {
+    margin-bottom: 10px !important;
+  }
+
+  .wrapper .sidebar ul li a {
+    padding: 10px 30px !important;
   }
 
 }
@@ -216,6 +233,7 @@ ul {
   transition: 300ms;
   cursor: pointer;
   min-width: 8%;
+  -webkit-appearance: none;
 }
 .button:hover{
   color: #658feb;
@@ -229,7 +247,9 @@ ul {
   cursor: pointer;
   min-width: 8%;
 }
-
+input {
+  -webkit-appearance: none;
+}
 @media only screen and (max-width: 800px) {
 
   .button{
@@ -299,8 +319,6 @@ ul {
 }
 
 
-</style>
-<style>
 .paveiksliukas{
   border-radius: 50%;
   width:128px;
@@ -380,7 +398,7 @@ ul {
   .paveiksliukas{
     border-radius: 50%;
     width:100px;
-    height:100px
+    height:100px;
   }
 
   .kortele{
@@ -392,7 +410,7 @@ ul {
     display: inline-block;
     width: 34% !important;
     margin-bottom: 5%;
-    margin: 2%
+    margin: 2%;
   }
   .butonas{
     font-size: 20px;
@@ -406,11 +424,11 @@ ul {
       margin-left: 84%;
       margin-top: -10%;
   }
-.sidebar{
-  display: none;
-  width: 70% !important;
-  z-index: 99;
-}
+  .sidebar{
+    display: none;
+    width: 70% !important;
+    z-index: 99;
+  }
 }
 @media only screen and (max-width: 600px) {
   .butonas{
