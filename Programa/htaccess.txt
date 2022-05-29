@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?localhost [NC]
+RewriteCond %{HTTP_REFERER} !^http://(www\.)?localhost.*$ [NC]
+RewriteRule \.(gif|png|txt|jpg|jpeg|pdf)$ - [F]
