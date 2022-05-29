@@ -11,3 +11,4 @@ if ( mysqli_connect_errno() ) {
 	// If there is an error with the connection, stop the script and display the error.
 	exit('Klaida: ' . mysqli_connect_error());
 }?>
+;
